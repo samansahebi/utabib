@@ -1,6 +1,6 @@
 services:
   flask:
-    build: Dockerfiles/flask
+    build: .
     volumes:
       - app:/app
     depends_on:
