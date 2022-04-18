@@ -1,3 +1,4 @@
+from email.policy import default
 from flask_mongoengine import MongoEngine
 from ..app import app
 
@@ -8,4 +9,4 @@ db.init_app(app)
 class User(db.Document):
     username = db.StringField(required=True, unique=True)
     name = db.StringField()
-    calls = db.StringField()
+    calls = db.StringField(default=0)
